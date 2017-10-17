@@ -1,0 +1,6 @@
+﻿#忽略前端gulp自动化构建的文件
+/node_modules/
+/.project
+/.vscode/
+/*.bat
+*/.DS_Store
