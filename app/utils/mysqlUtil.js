@@ -26,34 +26,34 @@ var release = connection => {
 
 var execQuery = sqlOptions => {
     var results = new Promise((resolve, reject) => {
-            connectionPool.getConnection((error, connection) => {
+        connectionPool.getConnection((error, connection) => {
             if(error) {
-                console.log("Get connection from mysql pool failed !");
+                console.log('Get connection from mysql pool failed !');
                 throw error;
             }
 
             var sql = sqlOptions['sql'];
             var args = sqlOptions['args'];
+			
+			if(!args) {
+				var query = connection.query(sql, (error, results) => {
+					if(error) {
+						console.log('Execute query error !');
+						throw error;
+					}
 
-            if(!args) {
-                var query = connection.query(sql, (error, results) => {
-                    if(error) {
-                        console.log('Execute query error !');
-                        throw error;
-                    }
+					resolve(results);
+				});
+			} else {
+				var query = connection.query(sql, args, function(error, results) {
+					if(error) {
+						console.log('Execute query error !');
+						throw error;
+					}
 
-                    resolve(results);
-                });
-            } else {
-                var query = connection.query(sql, args, function(error, results) {
-                    if(error) {
-                        console.log('Execute query error !');
-                        throw error;
-                    }
-
-                    resolve(results);
-                });
-            }
+					resolve(results);
+				});
+			}
 
             connection.release(function(error) {
                 if(error) {

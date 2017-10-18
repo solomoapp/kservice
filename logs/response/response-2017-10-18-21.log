@@ -1,0 +1,12 @@
+[2017-10-18 21:59:12.115] [INFO] responseLogger - 
+*************** response log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 15
+response status: 200
+response body: 
+{"statusCode":0,"statusDesc":"成功","timestamp":1508335152113,"data":{"id":1,"name":"yuming","age":27,"height":172}}
+*************** response log end ***************
+

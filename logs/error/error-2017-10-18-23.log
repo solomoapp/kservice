@@ -1,0 +1,95 @@
+[2017-10-18 23:03:17.627] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 17
+err name: Error
+err message: Can't set headers after they are sent.
+err stack: Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:489:11)
+    at ServerResponse.setHeader (_http_outgoing.js:496:3)
+    at Object.set (D:\koa2\node_modules\koa\lib\response.js:440:16)
+    at Object.set type [as type] (D:\koa2\node_modules\koa\lib\response.js:310:12)
+    at D:\koa2\app\controller\userController.js:10:21
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+*************** error log end ***************
+
+[2017-10-18 23:04:44.232] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 15
+err name: Error
+err message: Can't set headers after they are sent.
+err stack: Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:489:11)
+    at ServerResponse.setHeader (_http_outgoing.js:496:3)
+    at Object.set (D:\koa2\node_modules\koa\lib\response.js:440:16)
+    at Object.set type [as type] (D:\koa2\node_modules\koa\lib\response.js:310:12)
+    at logUtil.outputLog (D:\koa2\app\controller\userController.js:10:21)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+*************** error log end ***************
+
+[2017-10-18 23:13:06.011] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 17
+err name: Error
+err message: Can't set headers after they are sent.
+err stack: Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:489:11)
+    at ServerResponse.setHeader (_http_outgoing.js:496:3)
+    at Object.set (D:\koa2\node_modules\koa\lib\response.js:440:16)
+    at Object.set type [as type] (D:\koa2\node_modules\koa\lib\response.js:310:12)
+    at logUtil.outputLog (D:\koa2\app\controller\userController.js:10:21)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+*************** error log end ***************
+
+[2017-10-18 23:13:08.895] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 2
+err name: Error
+err message: Can't set headers after they are sent.
+err stack: Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:489:11)
+    at ServerResponse.setHeader (_http_outgoing.js:496:3)
+    at Object.set (D:\koa2\node_modules\koa\lib\response.js:440:16)
+    at Object.set type [as type] (D:\koa2\node_modules\koa\lib\response.js:310:12)
+    at logUtil.outputLog (D:\koa2\app\controller\userController.js:10:21)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+*************** error log end ***************
+
+[2017-10-18 23:13:43.592] [ERROR] errorLogger - 
+*************** error log start ***************
+request method: GET
+request originalUrl:  /cgi/user/getUserInfo?id=1
+request client ip:  ::1
+request query:  {"id":"1"}
+response time: 15
+err name: Error
+err message: Can't set headers after they are sent.
+err stack: Error: Can't set headers after they are sent.
+    at validateHeader (_http_outgoing.js:489:11)
+    at ServerResponse.setHeader (_http_outgoing.js:496:3)
+    at Object.set (D:\koa2\node_modules\koa\lib\response.js:440:16)
+    at Object.set type [as type] (D:\koa2\node_modules\koa\lib\response.js:310:12)
+    at logUtil.outputLog (D:\koa2\app\controller\userController.js:10:21)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+*************** error log end ***************
+
