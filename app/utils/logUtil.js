@@ -35,8 +35,10 @@ var formatResponse = function (ctx, resTime) {
     logText += formatRequestLog(ctx.request, resTime);
     //响应状态码
     logText += "response status: " + ctx.status + "\n";
-    //响应内容
-    logText += "response body: " + "\n" + JSON.stringify(ctx.body) + "\n";
+	//响应内容
+	if (/json/.test(ctx.type)) {
+		logText += "response body: " + "\n" + JSON.stringify(ctx.body) + "\n";
+	}
 
     //响应日志结束
     logText += "*************** response log end ***************" + "\n";

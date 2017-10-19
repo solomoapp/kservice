@@ -2,41 +2,29 @@
 const userDao = require('./../dao/userDao.js');
 
 var getUserInfo = async (userId) => {
-    var query = await userDao.getUserById(userId);
-    var responseJson = {
-		statusCode: 0,
-		statusDesc: '成功',
-		timestamp: new Date().getTime(),
-		data: query[0] || null
-	};
-    return responseJson;
+    var result = await userDao.getUserById(userId);
+    var data = result[0] || null;
+    return data;
 }
 
 var saveUserInfo = async (requestBody) => {
-    var query = await userDao.saveUserInfo(requestBody);
-    var responseJson = null;
-	if(!query.warningCount){
-		responseJson = {
-			statusCode: 0,
-			statusDesc: '成功',
-			timestamp: new Date().getTime(),
-			data: query.insertId || null
-		};
+    var result = await userDao.saveUserInfo(requestBody);
+    var data = null;
+	if(!result.warningCount){
+		data = result.insertId || null
 	}else{
-		responseJson = {
-			statusCode: 0,
-			statusDesc: query.message,
-			timestamp: new Date().getTime(),
-			data: null
+		data = {
+			'_code': 1,
+			'_message': result.message,
 		};
 	}
-    return responseJson;
+    return data;
 }
 
 var userInfo = async (userId) => {
-    var query = await userDao.getUserById(userId);
+    var result = await userDao.getUserById(userId);
     var responseContent = '';
-    for(let user of query) {
+    for(let user of result) {
         responseContent += '姓名：' + user.name + '&nbsp;|';
         responseContent += '年龄：' + user.age + '&nbsp;|';
         responseContent += '身高：' + user.height + '<br />';

@@ -1,4 +1,5 @@
 ﻿#忽略前端gulp自动化构建的文件
+/logs/*/
 /node_modules/
 /.project
 /.vscode/

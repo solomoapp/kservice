@@ -7,8 +7,8 @@ var getUserById = async (userId) => {
         args : [userId]
     };
 
-    var query = await mysql.execQuery(mysqlOptions);
-    return query;
+    var result = await mysql.execQuery(mysqlOptions);
+    return result;
 };
 
 var saveUserInfo = async (requestBody) => {
@@ -32,8 +32,8 @@ var saveUserInfo = async (requestBody) => {
         args : args
     };
 
-    var query = await mysql.execQuery(mysqlOptions);
-    return query;
+    var result = await mysql.execQuery(mysqlOptions);
+    return result;
 };
 
 module.exports = {
