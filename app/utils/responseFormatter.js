@@ -4,6 +4,9 @@
 const logUtil = require('./logUtil');
 //response数据格式化
 var response_formatter = (ctx) => {
+	if (ctx.response.status != 200) {
+		return;
+	}
 	//如果有返回数据，将返回数据添加到data中
 	let body = ctx.response.body;
 	let result = {
