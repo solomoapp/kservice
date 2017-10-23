@@ -4,14 +4,14 @@ const config = require('./../../config/config.local.js');
 
 var connectionPool = mysql.createPool({
     'host' : config.database.host,
-    'port':config.database.port,
+    'port' :config.database.port,
     'user' : config.database.user,
     'password' : config.database.password,
     'database' : config.database.database,
-    'charset': config.database.charset,
-    'connectionLimit': config.database.connectionLimit,
-    'supportBigNumbers': true,
-    'bigNumberStrings': true
+    'charset' : config.database.charset,
+    'connectionLimit' : config.database.connectionLimit,
+    'supportBigNumbers' : true,
+    'bigNumberStrings' : true
 });
 
 var release = connection => {

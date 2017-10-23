@@ -1,22 +1,24 @@
 //处理封装从***Dao.js获取到的数据返回给Controller
 const userDao = require('./../dao/userDao.js');
+const ApiError = require('../error/ApiError.js');
+const ApiErrorNames = require('../error/ApiErrorNames.js');
 
 var getUserInfo = async (userId) => {
     var result = await userDao.getUserById(userId);
-    var data = result[0] || null;
+    var data = result[0];
+    if (!data) {
+        throw new ApiError(ApiErrorNames.USER_NOT_EXIST);
+    }
     return data;
 }
 
 var saveUserInfo = async (requestBody) => {
     var result = await userDao.saveUserInfo(requestBody);
     var data = null;
-	if(!result.warningCount){
+	if (!result.warningCount) {
 		data = result.insertId || null
-	}else{
-		data = {
-			'_code': 1,
-			'_message': result.message,
-		};
+	} else {
+        throw new ApiError('_9527', -1, result.message);
 	}
     return data;
 }
